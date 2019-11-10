@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
+<body>
+<div class="slideshow">
+    <div class="slideshow-image" style="background-image: url('img/1.jpg')"></div>
+    <div class="slideshow-image" style="background-image: url('img/2.jpg')"></div>
+    <div class="slideshow-image" style="background-image: url('img/3.jpg')"></div>
+    <div class="slideshow-image" style="background-image: url('img/4.jpg')"></div>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href="javascript:;" style="color: darkgray"></a></li>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="javascript:;"></a></li>
+        <li><a href="https://github.com/YuiHama" target="_blank"></a></li>
+    </ul>
+</div>
+<div class="FirstContent divs">
+    <h1>CDQ</h1>
+    <h3>与其感慨路难行，不如马上出发</h3>
+    <img src="img/xx.jpg" alt="wdnmd">
+</div>
+<div class="Second divs">
+
+</div>
+<div class="Third divs">
+
+</div>
+
+
+<script>
+    window.onload = function () {
+        var divs = document.getElementsByClassName("divs");
+        var Alla = document.getElementsByTagName("a");
+        for (var i = 0; i < Alla.length - 1; i++) {
+            Alla[i].index = i;
+            Alla[i].onclick = function () {
+                for (var i = 0; i < Alla.length - 1; i++) {
+                    divs[i].style.display = "none";
+                    Alla[i].style.color = "";
+                }
+                divs[this.index].style.display = "block";
+                this.style.color = "darkgrey";
+            }
+        }
+    }
+</script>
+</body>
+</html>
